@@ -1,5 +1,5 @@
 const ENS = require('../')
-const HttpProvider = require('ethjs-provider-http')
+const HttpProvider = require('vapjs-provider-http')
 const networkMap = require('../lib/network-map.json')
 let ens
 

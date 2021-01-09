@@ -1,23 +1,23 @@
-# EthJS ENS
+# VapJS ENS
 
-[![CircleCI](https://circleci.com/gh/ethjs/ethjs-ens.svg?style=svg)](https://circleci.com/gh/ethjs/ethjs-ens)
-[![Coverage Status](https://coveralls.io/repos/github/ethjs/ethjs-ens/badge.svg?branch=master)](https://coveralls.io/github/ethjs/ethjs-ens?branch=master)
+[![CircleCI](https://circleci.com/gh/vapjs/vapjs-ens.svg?style=svg)](https://circleci.com/gh/vapjs/vapjs-ens)
+[![Coverage Status](https://coveralls.io/repos/github/vapjs/vapjs-ens/badge.svg?branch=master)](https://coveralls.io/github/vapjs/vapjs-ens?branch=master)
 
-A convenience interface for using the Ethereum Name Service, based on the [EthJS contract abstraction](https://github.com/ethjs/ethjs-contract).
+A convenience interface for using the Vapory Name Service, based on the [VapJS contract abstraction](https://github.com/vapjs/vapjs-contract).
 
-[Live Demo](https://ethjs.github.io/ethjs-ens)
+[Live Demo](https://vapjs.github.io/vapjs-ens)
 
 ## Installation
 
 Install from npm:
 
-`npm install ethjs-ens --save`
+`npm install vapjs-ens --save`
 
 ## Usage
 
 ```javascript
-const ENS = require('ethjs-ens')
-const HttpProvider = require('ethjs-provider-http')
+const ENS = require('vapjs-ens')
+const HttpProvider = require('vapjs-provider-http')
 
 // For MetaMask or Mist compatibility:
 if (typeof window === 'object' && typeof window.web3 !== 'undefined') {
@@ -33,7 +33,7 @@ function setupEns (provider) {
   // either a network or registryAddress param
   const ens = new ENS({ provider, network: '3' })
 
-  ens.lookup('vitalik.eth')
+  ens.lookup('vitalik.vap')
   .then((address) => {
     const expected = '0x5f8f68a0d1cbc75f6ef764a44619277092c32df0'
 
@@ -53,7 +53,7 @@ function setupEns (provider) {
 
 ### ens.lookup( name )
 
-Takes a valid [ENS](https://ens.readthedocs.io/en/latest/introduction.html) name, like `vitalik.eth`, or `some.specialname.eth`.
+Takes a valid [ENS](https://ens.readthedocs.io/en/latest/introduction.html) name, like `vitalik.vap`, or `some.specialname.vap`.
 
 Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a hex-prefixed hexadecimal string for the resolved address.
 
@@ -65,15 +65,15 @@ new Error('ENS name not found.')
 
 ### ens.reverse( address )
 
-Takes an ethereum address (hex-encoded), and attempts to look up a corresponding name on the registry's reverse-registrar.
+Takes an vapory address (hex-encoded), and attempts to look up a corresponding name on the registry's reverse-registrar.
 
 Returns a promise that resolves a string if a name exists, or throws if it does not.
 
 ### ens.registry
 
-An [ethjs contract](https://github.com/ethjs/ethjs-ens) instance initialized for the specified network's address.
+An [vapjs contract](https://github.com/vapjs/vapjs-ens) instance initialized for the specified network's address.
 
-Implements the registry interface specified in [EIP 137](https://github.com/ethereum/EIPs/issues/137):
+Implements the registry interface specified in [EIP 137](https://github.com/vaporyco/EIPs/issues/137):
 
 ```
 function owner(bytes32 node) constant returns (address);

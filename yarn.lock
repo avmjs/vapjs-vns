@@ -493,55 +493,55 @@ esutils@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
 
-eth-ens-namehash@^1.0.2:
+vap-ens-namehash@^1.0.2:
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/eth-ens-namehash/-/eth-ens-namehash-1.0.2.tgz#05ecdd6bac2d7fd7bc5ca84a993c6bad9da4edb9"
+  resolved "https://registry.yarnpkg.com/vap-ens-namehash/-/vap-ens-namehash-1.0.2.tgz#05ecdd6bac2d7fd7bc5ca84a993c6bad9da4edb9"
   dependencies:
     idna-uts46 "^1.0.1"
     js-sha3 "^0.5.7"
 
-ethereum-common@0.0.16:
+vapory-common@0.0.16:
   version "0.0.16"
-  resolved "https://registry.yarnpkg.com/ethereum-common/-/ethereum-common-0.0.16.tgz#9a1e169ead34ab75e089f50ca512bfd0fbd12655"
+  resolved "https://registry.yarnpkg.com/vapory-common/-/vapory-common-0.0.16.tgz#9a1e169ead34ab75e089f50ca512bfd0fbd12655"
 
-ethereum-common@0.0.18, ethereum-common@^0.0.18:
+vapory-common@0.0.18, vapory-common@^0.0.18:
   version "0.0.18"
-  resolved "https://registry.yarnpkg.com/ethereum-common/-/ethereum-common-0.0.18.tgz#2fdc3576f232903358976eb39da783213ff9523f"
+  resolved "https://registry.yarnpkg.com/vapory-common/-/vapory-common-0.0.18.tgz#2fdc3576f232903358976eb39da783213ff9523f"
 
-ethereum-ens-network-map@^1.0.0:
+vapory-ens-network-map@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ethereum-ens-network-map/-/ethereum-ens-network-map-1.0.0.tgz#43cd7669ce950a789e151001118d4d65f210eeb7"
+  resolved "https://registry.yarnpkg.com/vapory-ens-network-map/-/vapory-ens-network-map-1.0.0.tgz#43cd7669ce950a789e151001118d4d65f210eeb7"
 
-ethereumjs-account@^2.0.3, ethereumjs-account@~2.0.4:
+vaporyjs-account@^2.0.3, vaporyjs-account@~2.0.4:
   version "2.0.4"
-  resolved "https://registry.yarnpkg.com/ethereumjs-account/-/ethereumjs-account-2.0.4.tgz#f8c30231bcb707f4514d8a052c1f9da103624d47"
+  resolved "https://registry.yarnpkg.com/vaporyjs-account/-/vaporyjs-account-2.0.4.tgz#f8c30231bcb707f4514d8a052c1f9da103624d47"
   dependencies:
-    ethereumjs-util "^4.0.1"
+    vaporyjs-util "^4.0.1"
     rlp "^2.0.0"
 
-ethereumjs-block@^1.2.2, ethereumjs-block@~1.2.2:
+vaporyjs-block@^1.2.2, vaporyjs-block@~1.2.2:
   version "1.2.2"
-  resolved "https://registry.yarnpkg.com/ethereumjs-block/-/ethereumjs-block-1.2.2.tgz#2ec7534a59021b8ec9b83c30e49690c6ebaedda1"
+  resolved "https://registry.yarnpkg.com/vaporyjs-block/-/vaporyjs-block-1.2.2.tgz#2ec7534a59021b8ec9b83c30e49690c6ebaedda1"
   dependencies:
     async "^1.5.2"
-    ethereum-common "0.0.16"
-    ethereumjs-tx "^1.0.0"
-    ethereumjs-util "^4.0.1"
+    vapory-common "0.0.16"
+    vaporyjs-tx "^1.0.0"
+    vaporyjs-util "^4.0.1"
     merkle-patricia-tree "^2.1.2"
 
-ethereumjs-testrpc@^3.0.3:
+vaporyjs-testrpc@^3.0.3:
   version "3.0.5"
-  resolved "https://registry.yarnpkg.com/ethereumjs-testrpc/-/ethereumjs-testrpc-3.0.5.tgz#0d5c5174d0f92278c7cc8785b85a5aafedd7513a"
+  resolved "https://registry.yarnpkg.com/vaporyjs-testrpc/-/vaporyjs-testrpc-3.0.5.tgz#0d5c5174d0f92278c7cc8785b85a5aafedd7513a"
   dependencies:
     async "~1.5.0"
     bignumber.js "~2.1.4"
     bip39 "~2.2.0"
-    ethereumjs-account "~2.0.4"
-    ethereumjs-block "~1.2.2"
-    ethereumjs-tx "^1.3.0"
-    ethereumjs-util "~4.5.0"
-    ethereumjs-vm "~2.0.1"
-    ethereumjs-wallet "~0.6.0"
+    vaporyjs-account "~2.0.4"
+    vaporyjs-block "~1.2.2"
+    vaporyjs-tx "^1.3.0"
+    vaporyjs-util "~4.5.0"
+    vaporyjs-vm "~2.0.1"
+    vaporyjs-wallet "~0.6.0"
     fake-merkle-patricia-tree "~1.0.1"
     heap "~0.2.6"
     merkle-patricia-tree "~2.1.2"
@@ -552,16 +552,16 @@ ethereumjs-testrpc@^3.0.3:
     web3-provider-engine "~8.1.0"
     yargs "~3.29.0"
 
-ethereumjs-tx@^1.0.0, ethereumjs-tx@^1.2.0, ethereumjs-tx@^1.3.0:
+vaporyjs-tx@^1.0.0, vaporyjs-tx@^1.2.0, vaporyjs-tx@^1.3.0:
   version "1.3.0"
-  resolved "https://registry.yarnpkg.com/ethereumjs-tx/-/ethereumjs-tx-1.3.0.tgz#09f9a3239ac6d9a268cad122967345062a536abd"
+  resolved "https://registry.yarnpkg.com/vaporyjs-tx/-/vaporyjs-tx-1.3.0.tgz#09f9a3239ac6d9a268cad122967345062a536abd"
   dependencies:
-    ethereum-common "^0.0.18"
-    ethereumjs-util "^5.0.0"
+    vapory-common "^0.0.18"
+    vaporyjs-util "^5.0.0"
 
-ethereumjs-util@^4.0.0, ethereumjs-util@^4.0.1, ethereumjs-util@^4.4.0, ethereumjs-util@~4.5.0:
+vaporyjs-util@^4.0.0, vaporyjs-util@^4.0.1, vaporyjs-util@^4.4.0, vaporyjs-util@~4.5.0:
   version "4.5.0"
-  resolved "https://registry.yarnpkg.com/ethereumjs-util/-/ethereumjs-util-4.5.0.tgz#3e9428b317eebda3d7260d854fddda954b1f1bc6"
+  resolved "https://registry.yarnpkg.com/vaporyjs-util/-/vaporyjs-util-4.5.0.tgz#3e9428b317eebda3d7260d854fddda954b1f1bc6"
   dependencies:
     bn.js "^4.8.0"
     create-hash "^1.1.2"
@@ -569,122 +569,122 @@ ethereumjs-util@^4.0.0, ethereumjs-util@^4.0.1, ethereumjs-util@^4.4.0, ethereum
     rlp "^2.0.0"
     secp256k1 "^3.0.1"
 
-ethereumjs-util@^5.0.0, ethereumjs-util@^5.0.1:
+vaporyjs-util@^5.0.0, vaporyjs-util@^5.0.1:
   version "5.1.1"
-  resolved "https://registry.yarnpkg.com/ethereumjs-util/-/ethereumjs-util-5.1.1.tgz#122fb38dea747dc62b3aebfc365d1bd48be4b73e"
+  resolved "https://registry.yarnpkg.com/vaporyjs-util/-/vaporyjs-util-5.1.1.tgz#122fb38dea747dc62b3aebfc365d1bd48be4b73e"
   dependencies:
     bn.js "^4.8.0"
     create-hash "^1.1.2"
-    ethjs-util "^0.1.3"
+    vapjs-util "^0.1.3"
     keccak "^1.0.2"
     rlp "^2.0.0"
     secp256k1 "^3.0.1"
 
-ethereumjs-vm@^2.0.2, ethereumjs-vm@~2.0.1:
+vaporyjs-vm@^2.0.2, vaporyjs-vm@~2.0.1:
   version "2.0.2"
-  resolved "https://registry.yarnpkg.com/ethereumjs-vm/-/ethereumjs-vm-2.0.2.tgz#84e2372a5715a80a62f7f2a312f8c64537e8a842"
+  resolved "https://registry.yarnpkg.com/vaporyjs-vm/-/vaporyjs-vm-2.0.2.tgz#84e2372a5715a80a62f7f2a312f8c64537e8a842"
   dependencies:
     async "^2.1.2"
     async-eventemitter "^0.2.2"
-    ethereum-common "0.0.18"
-    ethereumjs-account "^2.0.3"
-    ethereumjs-block "^1.2.2"
-    ethereumjs-util "^4.0.1"
+    vapory-common "0.0.18"
+    vaporyjs-account "^2.0.3"
+    vaporyjs-block "^1.2.2"
+    vaporyjs-util "^4.0.1"
     fake-merkle-patricia-tree "^1.0.1"
     functional-red-black-tree "^1.0.1"
     merkle-patricia-tree "^2.1.2"
 
-ethereumjs-wallet@~0.6.0:
+vaporyjs-wallet@~0.6.0:
   version "0.6.0"
-  resolved "https://registry.yarnpkg.com/ethereumjs-wallet/-/ethereumjs-wallet-0.6.0.tgz#82763b1697ee7a796be7155da9dfb49b2f98cfdb"
+  resolved "https://registry.yarnpkg.com/vaporyjs-wallet/-/vaporyjs-wallet-0.6.0.tgz#82763b1697ee7a796be7155da9dfb49b2f98cfdb"
   dependencies:
     aes-js "^0.2.3"
     bs58check "^1.0.8"
-    ethereumjs-util "^4.4.0"
+    vaporyjs-util "^4.4.0"
     hdkey "^0.7.0"
     scrypt.js "^0.2.0"
     utf8 "^2.1.1"
     uuid "^2.0.1"
 
-ethjs-abi@0.2.0:
+vapjs-abi@0.2.0:
   version "0.2.0"
-  resolved "https://registry.yarnpkg.com/ethjs-abi/-/ethjs-abi-0.2.0.tgz#d3e2c221011520fc499b71682036c14fcc2f5b25"
+  resolved "https://registry.yarnpkg.com/vapjs-abi/-/vapjs-abi-0.2.0.tgz#d3e2c221011520fc499b71682036c14fcc2f5b25"
   dependencies:
     bn.js "4.11.6"
     js-sha3 "0.5.5"
     number-to-bn "1.7.0"
 
-ethjs-contract@0.1.9, ethjs-contract@^0.1.7:
+vapjs-contract@0.1.9, vapjs-contract@^0.1.7:
   version "0.1.9"
-  resolved "https://registry.yarnpkg.com/ethjs-contract/-/ethjs-contract-0.1.9.tgz#1c2766896a56d47ec1d6d661829c49cc38a5520a"
+  resolved "https://registry.yarnpkg.com/vapjs-contract/-/vapjs-contract-0.1.9.tgz#1c2766896a56d47ec1d6d661829c49cc38a5520a"
   dependencies:
-    ethjs-abi "0.2.0"
-    ethjs-filter "0.1.5"
-    ethjs-util "0.1.3"
+    vapjs-abi "0.2.0"
+    vapjs-filter "0.1.5"
+    vapjs-util "0.1.3"
     js-sha3 "0.5.5"
 
-ethjs-filter@0.1.5:
+vapjs-filter@0.1.5:
   version "0.1.5"
-  resolved "https://registry.yarnpkg.com/ethjs-filter/-/ethjs-filter-0.1.5.tgz#0112af6017c24677e32b8fdeb20e6196019b7598"
+  resolved "https://registry.yarnpkg.com/vapjs-filter/-/vapjs-filter-0.1.5.tgz#0112af6017c24677e32b8fdeb20e6196019b7598"
 
-ethjs-format@0.2.0:
+vapjs-format@0.2.0:
   version "0.2.0"
-  resolved "https://registry.yarnpkg.com/ethjs-format/-/ethjs-format-0.2.0.tgz#b4aa513fc1d50270d8f102bf06f03c9490d31391"
+  resolved "https://registry.yarnpkg.com/vapjs-format/-/vapjs-format-0.2.0.tgz#b4aa513fc1d50270d8f102bf06f03c9490d31391"
   dependencies:
     bn.js "4.11.6"
-    ethjs-schema "0.1.5"
-    ethjs-util "0.1.3"
+    vapjs-schema "0.1.5"
+    vapjs-util "0.1.3"
     is-hex-prefixed "1.0.0"
     number-to-bn "1.7.0"
     strip-hex-prefix "1.0.0"
 
-ethjs-provider-http@0.1.6, ethjs-provider-http@^0.1.6:
+vapjs-provider-http@0.1.6, vapjs-provider-http@^0.1.6:
   version "0.1.6"
-  resolved "https://registry.yarnpkg.com/ethjs-provider-http/-/ethjs-provider-http-0.1.6.tgz#1ec5d9b4be257ef1d56a500b22a741985e889420"
+  resolved "https://registry.yarnpkg.com/vapjs-provider-http/-/vapjs-provider-http-0.1.6.tgz#1ec5d9b4be257ef1d56a500b22a741985e889420"
   dependencies:
     xhr2 "0.1.3"
 
-ethjs-query@0.2.6, ethjs-query@^0.2.4:
+vapjs-query@0.2.6, vapjs-query@^0.2.4:
   version "0.2.6"
-  resolved "https://registry.yarnpkg.com/ethjs-query/-/ethjs-query-0.2.6.tgz#9d8e6044b8bf76dd3340f843716a2259b9c91d3c"
+  resolved "https://registry.yarnpkg.com/vapjs-query/-/vapjs-query-0.2.6.tgz#9d8e6044b8bf76dd3340f843716a2259b9c91d3c"
   dependencies:
-    ethjs-format "0.2.0"
-    ethjs-rpc "0.1.5"
+    vapjs-format "0.2.0"
+    vapjs-rpc "0.1.5"
 
-ethjs-rpc@0.1.5:
+vapjs-rpc@0.1.5:
   version "0.1.5"
-  resolved "https://registry.yarnpkg.com/ethjs-rpc/-/ethjs-rpc-0.1.5.tgz#099e22f27dc4c18b6978a485fc36b1b0f7969080"
+  resolved "https://registry.yarnpkg.com/vapjs-rpc/-/vapjs-rpc-0.1.5.tgz#099e22f27dc4c18b6978a485fc36b1b0f7969080"
 
-ethjs-schema@0.1.5:
+vapjs-schema@0.1.5:
   version "0.1.5"
-  resolved "https://registry.yarnpkg.com/ethjs-schema/-/ethjs-schema-0.1.5.tgz#59740e3b3977bcdbb9b11bc3068201e8aceabb0d"
+  resolved "https://registry.yarnpkg.com/vapjs-schema/-/vapjs-schema-0.1.5.tgz#59740e3b3977bcdbb9b11bc3068201e8aceabb0d"
 
-ethjs-unit@0.1.6:
+vapjs-unit@0.1.6:
   version "0.1.6"
-  resolved "https://registry.yarnpkg.com/ethjs-unit/-/ethjs-unit-0.1.6.tgz#c665921e476e87bce2a9d588a6fe0405b2c41699"
+  resolved "https://registry.yarnpkg.com/vapjs-unit/-/vapjs-unit-0.1.6.tgz#c665921e476e87bce2a9d588a6fe0405b2c41699"
   dependencies:
     bn.js "4.11.6"
     number-to-bn "1.7.0"
 
-ethjs-util@0.1.3, ethjs-util@^0.1.3:
+vapjs-util@0.1.3, vapjs-util@^0.1.3:
   version "0.1.3"
-  resolved "https://registry.yarnpkg.com/ethjs-util/-/ethjs-util-0.1.3.tgz#dfd5ea4a400dc5e421a889caf47e081ada78bb55"
+  resolved "https://registry.yarnpkg.com/vapjs-util/-/vapjs-util-0.1.3.tgz#dfd5ea4a400dc5e421a889caf47e081ada78bb55"
   dependencies:
     is-hex-prefixed "1.0.0"
     strip-hex-prefix "1.0.0"
 
-ethjs@^0.2.5:
+vapjs@^0.2.5:
   version "0.2.7"
-  resolved "https://registry.yarnpkg.com/ethjs/-/ethjs-0.2.7.tgz#a5ca83589133cb6038893ca48958d5cac1135ee8"
+  resolved "https://registry.yarnpkg.com/vapjs/-/vapjs-0.2.7.tgz#a5ca83589133cb6038893ca48958d5cac1135ee8"
   dependencies:
     bn.js "4.11.6"
-    ethjs-abi "0.2.0"
-    ethjs-contract "0.1.9"
-    ethjs-filter "0.1.5"
-    ethjs-provider-http "0.1.6"
-    ethjs-query "0.2.6"
-    ethjs-unit "0.1.6"
-    ethjs-util "0.1.3"
+    vapjs-abi "0.2.0"
+    vapjs-contract "0.1.9"
+    vapjs-filter "0.1.5"
+    vapjs-provider-http "0.1.6"
+    vapjs-query "0.2.6"
+    vapjs-unit "0.1.6"
+    vapjs-util "0.1.3"
     js-sha3 "0.5.5"
     number-to-bn "1.7.0"
 
@@ -1277,7 +1277,7 @@ merkle-patricia-tree@^2.1.2, merkle-patricia-tree@~2.1.2:
   resolved "https://registry.yarnpkg.com/merkle-patricia-tree/-/merkle-patricia-tree-2.1.2.tgz#724483d54b75631a48fedda55e114051706a7291"
   dependencies:
     async "^1.4.2"
-    ethereumjs-util "^4.0.0"
+    vaporyjs-util "^4.0.0"
     level-ws "0.0.0"
     levelup "^1.2.1"
     memdown "^1.0.0"
@@ -2037,10 +2037,10 @@ web3-provider-engine@~8.1.0:
   dependencies:
     async "^2.1.2"
     clone "^2.0.0"
-    ethereumjs-block "^1.2.2"
-    ethereumjs-tx "^1.2.0"
-    ethereumjs-util "^5.0.1"
-    ethereumjs-vm "^2.0.2"
+    vaporyjs-block "^1.2.2"
+    vaporyjs-tx "^1.2.0"
+    vaporyjs-util "^5.0.1"
+    vaporyjs-vm "^2.0.2"
     isomorphic-fetch "^2.2.0"
     request "^2.67.0"
     semaphore "^1.0.3"

@@ -1,23 +1,23 @@
 const test = require('tape')
 const sinon = require('sinon')
 
-const Eth = require('ethjs-query')
-const EthContract = require('ethjs-contract')
+const Vap = require('vapjs-query')
+const VapContract = require('vapjs-contract')
 const Web3 = require('web3')
 const fs = require('fs');
 const solc = require('solc');
-const TestRPC = require('ethereumjs-testrpc');
+const TestRPC = require('vaporyjs-testrpc');
 const ENS = require('../')
-const namehash = require('eth-ens-namehash')
+const namehash = require('vap-ens-namehash')
 
 const emptyAddress = '0x0000000000000000000000000000000000000000'
 const notFound = 'ENS name not defined.'
 const badName = 'Illegal Character for ENS.'
 
 const provider = TestRPC.provider()
-const eth = new Eth(provider)
+const vap = new Vap(provider)
 const web3 = new Web3(provider)
-const contract = new EthContract(eth)
+const contract = new VapContract(vap)
 
 const registryAbi = require('../abis/registry.json')
 const resolverAbi = require('../abis/resolver.json')
@@ -27,12 +27,12 @@ let deploy, ensRoot, ens, accounts, deployRoot
 
 test('setup', { timeout: 5000 }, function (t) {
 
-  eth.accounts()
+  vap.accounts()
   .then((result) => {
     accounts = result
 
     const interface = JSON.parse(deployer.interface)
-    var deployensContract = web3.eth.contract(JSON.parse(deployer.interface));
+    var deployensContract = web3.vap.contract(JSON.parse(deployer.interface));
 
     // Deploy the contract
     const deployens = deployensContract.new({
@@ -50,10 +50,10 @@ test('setup', { timeout: 5000 }, function (t) {
       .then((tx) => {
         deployRoot = tx.contractAddress
 
-        const EthjsDeploy = contract(interface)
-        const ethjsDeploy = EthjsDeploy.at(deployRoot)
+        const VapjsDeploy = contract(interface)
+        const vapjsDeploy = VapjsDeploy.at(deployRoot)
 
-        return ethjsDeploy.ens()
+        return vapjsDeploy.ens()
       })
       .then((addr) => {
         ensRoot = addr[0]
@@ -66,7 +66,7 @@ test('setup', { timeout: 5000 }, function (t) {
 })
 
 test('#getResolver() with invalid name should throw', function (t) {
-  ens.getResolver('havasupai.eth')
+  ens.getResolver('havasupai.vap')
   .catch((result) => {
     t.equal(result.message, notFound)
     t.end()
@@ -74,7 +74,7 @@ test('#getResolver() with invalid name should throw', function (t) {
 })
 
 test('#getResolver() should get resolver addresses', function (t) {
-  ens.getResolver('foo.eth')
+  ens.getResolver('foo.vap')
   .then((result) => {
     t.notEqual(result, emptyAddress)
     t.end()
@@ -82,7 +82,7 @@ test('#getResolver() should get resolver addresses', function (t) {
 })
 
 test('#getResolverAddress with valid name returns address.', function (t) {
-  ens.getResolverAddress('foo.eth')
+  ens.getResolverAddress('foo.vap')
   .then((result) => {
     t.notEqual(result, emptyAddress)
     t.end()
@@ -90,7 +90,7 @@ test('#getResolverAddress with valid name returns address.', function (t) {
 })
 
 test('#getResolverForNode with no hex prefix adds it.', function (t) {
-  const node = namehash('foo.eth').substr(2)
+  const node = namehash('foo.vap').substr(2)
   ens.getResolverForNode(node)
   .then((result) => {
     t.notEqual(result, emptyAddress)
@@ -99,7 +99,7 @@ test('#getResolverForNode with no hex prefix adds it.', function (t) {
 })
 
 test('#lookup() should get resolver addresses', function (t) {
-  ens.lookup('foo.eth')
+  ens.lookup('foo.vap')
   .then((result) => {
     t.notEqual(result, emptyAddress)
     t.end()
@@ -107,7 +107,7 @@ test('#lookup() should get resolver addresses', function (t) {
 })
 
 test('#lookup() name with no resolver should throw', function (t) {
-  ens.lookup('cardassian.eth')
+  ens.lookup('cardassian.vap')
   .catch((reason) => {
     t.equal(reason.message, 'ENS name not defined.')
     t.end()
@@ -115,7 +115,7 @@ test('#lookup() name with no resolver should throw', function (t) {
 })
 
 test('#lookup() with unregistered should throw', function (t) {
-  ens.lookup('blargadegh.eth')
+  ens.lookup('blargadegh.vap')
   .catch((reason) => {
     t.equal(reason.message, notFound)
     t.end()
@@ -125,7 +125,7 @@ test('#lookup() with unregistered should throw', function (t) {
 test('#reverse() on deployRoot', function (t) {
   ens.reverse(deployRoot)
   .then((name) => {
-    t.equal(name, 'deployer.eth')
+    t.equal(name, 'deployer.vap')
     t.end()
   })
 })
@@ -166,7 +166,7 @@ test('#reverse() throws on unknown address.', function (t) {
 
 test('#getNamehash() with good name', function (t) {
   t.plan(1)
-  ens.getNamehash('dan.eth')
+  ens.getNamehash('dan.vap')
   .then((hash) => {
     t.ok(hash, 'success')
   })
@@ -177,7 +177,7 @@ test('#getNamehash() with good name', function (t) {
 
 test('#getNamehash() with bad name', function (t) {
   t.plan(1)
-  ens.getNamehash('dino dan.eth')
+  ens.getNamehash('dino dan.vap')
   .then((hash) => {
     t.ok(false, 'should not resolve')
   })
@@ -188,7 +188,7 @@ test('#getNamehash() with bad name', function (t) {
 
 test('#lookup() with illegal char throws', function (t) {
   t.plan(1)
-  ens.lookup('dino dan.eth')
+  ens.lookup('dino dan.vap')
   .catch((reason) => {
     t.ok(reason)
     t.end()
@@ -197,7 +197,7 @@ test('#lookup() with illegal char throws', function (t) {
 
 function pollForTransaction(txHash) {
   let tx
-  return eth.getTransactionReceipt(txHash)
+  return vap.getTransactionReceipt(txHash)
   .then((result) => {
     if (!result) {
       return pollForTransaction(txHash)

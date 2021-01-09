@@ -1,14 +1,14 @@
 // External Deps
-const Eth = require('ethjs-query')
-const EthContract = require('ethjs-contract')
-const namehash = require('eth-ens-namehash')
+const Vap = require('vapjs-query')
+const VapContract = require('vapjs-contract')
+const namehash = require('vap-ens-namehash')
 
 // ABIs
 const registryAbi = require('./abis/registry.json')
 const resolverAbi = require('./abis/resolver.json')
 
 // Map network to known ENS registries
-const networkMap = require('ethereum-ens-network-map')
+const networkMap = require('vapory-ens-network-map')
 const emptyHash = '0x0000000000000000000000000000000000000000000000000000000000000000'
 const emptyAddr = '0x0000000000000000000000000000000000000000'
 
@@ -22,17 +22,17 @@ class Ens {
 
     // Validations
     if (!provider) {
-      throw new Error('The EthJsENS Constructor requires a provider.')
+      throw new Error('The VapJsENS Constructor requires a provider.')
     }
 
     // Requires EITHER a network or a registryAddress
     if (!network && !registryAddress) {
-      throw new Error('The EthJsENS Constructor requires a network or registry address.')
+      throw new Error('The VapJsENS Constructor requires a network or registry address.')
     }
 
     this.provider = provider
-    this.eth = new Eth(this.provider)
-    this.contract = new EthContract(this.eth)
+    this.vap = new Vap(this.provider)
+    this.contract = new VapContract(this.vap)
     this.namehash = namehash
 
     // Link to Registry
